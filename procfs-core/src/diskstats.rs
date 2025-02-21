@@ -12,7 +12,7 @@ use std::io::BufRead;
 /// example in the source repo.
 // Doc reference: https://www.kernel.org/doc/Documentation/ABI/testing/procfs-diskstats
 // Doc reference: https://www.kernel.org/doc/Documentation/iostats.txt
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Hash)]
 #[cfg_attr(feature = "serde1", derive(Serialize, Deserialize))]
 pub struct DiskStat {
     /// The device major number
